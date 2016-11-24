@@ -25,18 +25,18 @@ public class Miner extends UntypedActor {
                 obtainMinerals();
             } catch (InterruptedException e) {}
             log.info("[Miner] has the best minerals ready for you.");
-//            getSender().tell(Blacksmith.Message.MATERIALS, getSelf());
+            getSender().tell(Blacksmith.Message.MATERIALS, getSelf());
         } else {
             unhandled(o);
         }
     }
 
     private void obtainMinerals() throws InterruptedException {
-        log.info("extracting minerals...");
+        log.info("[Miner] extracting minerals...");
         Thread.sleep(500);
-        log.info("we need more vespene gas...");
+        log.info("[Miner] we need more vespene gas...");
         Thread.sleep(1000);
-        log.info("Ready!");
+        log.info("[Miner] Ready!");
     }
 
 }
