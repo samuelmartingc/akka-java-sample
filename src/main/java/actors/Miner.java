@@ -20,7 +20,7 @@ public class Miner extends UntypedActor {
         log.info("[Miner] has received message: \"{}\".", o);
 
         if (o == Message.OBTAIN_MINERALS) {
-            log.info("[Miner] está obteniendo materiales...");
+            log.info("[Miner] is obtaining minerals");
             try {
                 obtainMinerals();
             } catch (InterruptedException e) {}
