@@ -37,7 +37,7 @@ public class Blacksmith extends UntypedActor {
             log.info("[Blacksmith] is forging sword...");
             forgeSword();
             log.info("[Blacksmith] has finished his job, a beautiful shiny longsword.");
-//            swordsman.tell(Swordsman.Message.SWORD, getSelf());
+            swordsman.tell(Swordsman.Message.SWORD, getSelf());
         } else {
             unhandled(o);
         }
